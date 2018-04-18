@@ -17,13 +17,14 @@ fs.readFile('./input.txt', (err, data) => {
 
 	// Calculation
 	for (var i = 0; i < input.length; i++) {
+
 		if (input[i] === '(') {
 			counter++;
 		}
 		else{
 			counter--;
 		}
-
+		// Conditional only for the part two
 		if (counter===-1 && !answerTwo) {
 			index = i + 1;
 			answerTwo = true;
@@ -31,8 +32,12 @@ fs.readFile('./input.txt', (err, data) => {
 	}
 
 	// Printing
+
+	// Part One: Solution
 	console.log('Floor:', counter);
+	// Part Two: Solution
 	console.log('Position:', index);
+
 	console.timeEnd('funchallenge');
 	// End
 })
