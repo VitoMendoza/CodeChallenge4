@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 fs.readFile('./input.txt', (err, data) => {
-	
+
 	// Time Start
 	console.time('funchallenge');
 
@@ -12,7 +12,7 @@ fs.readFile('./input.txt', (err, data) => {
 	// Assignment of Values
 	var input = data.toString('utf8');
 
-	// Initializing Values
+	// Initializing Variables
 	var counter = 0;
 	var index;
 	var answerTwo = false;
