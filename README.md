@@ -1,4 +1,4 @@
-Code Challenge 4: Santa's Node Helper
+Coding Challenge 4: Santa's Node Helper
 
 
 The goal of this challenge is to practice our logic skills. Something that is useful not only in interviews when you get challenging problems, but also in your day to day work as a developer. 
