@@ -1,8 +1,10 @@
 const fs = require('fs');
 
 fs.readFile('./input.txt', (err, data) => {
+	
 	// Time Start
 	console.time('funchallenge');
+
 	if (err) {
 		console.log('Errooooor!!!');
 	}
@@ -18,21 +20,16 @@ fs.readFile('./input.txt', (err, data) => {
 	// Calculation
 	for (var i = 0; i < input.length; i++) {
 
-		if (input[i] === '(') {
-			counter++;
-		}
-		else{
-			counter--;
-		}
+		counter = input[i] === '(' ? counter++ : counter--;
+
 		// Conditional only for the part two
 		if (counter===-1 && !answerTwo) {
-			index = i + 1;
+			index = i++;
 			answerTwo = true;
 		}
 	}
 
 	// Printing
-
 	// Part One: Solution
 	console.log('Floor:', counter);
 	// Part Two: Solution
